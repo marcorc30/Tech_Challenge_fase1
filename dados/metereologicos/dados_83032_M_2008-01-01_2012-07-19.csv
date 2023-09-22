@@ -1,0 +1,67 @@
+Nome: LAMBARI
+Codigo Estacao: 83032
+Latitude: -21.944146
+Longitude: -45.317739
+Altitude: 884.56
+Situacao: Desativada
+Data Inicial: 2008-01-01
+Data Final: 2012-07-19
+Periodicidade da Medicao: Mensal
+
+Data Medicao;NUMERO DE DIAS COM PRECIP. PLUV, MENSAL(número);PRECIPITACAO TOTAL, MENSAL(mm);TEMPERATURA MAXIMA MEDIA, MENSAL(°C);TEMPERATURA MEDIA COMPENSADA, MENSAL(°C);TEMPERATURA MINIMA MEDIA, MENSAL(°C);UMIDADE RELATIVA DO AR, MEDIA MENSAL(%);
+2008-01-31;17;144.6;29.068966;null;null;null;
+2008-02-29;15;281.8;30.5;null;null;null;
+2008-03-31;13;330;29.482759;null;null;null;
+2008-04-30;15;181;28.393103;null;null;null;
+2008-05-31;5;38.4;25.535484;null;null;null;
+2008-06-30;4;25.2;24.886667;null;null;null;
+2008-07-31;0;0;25.546667;null;null;null;
+2008-08-31;7;50.8;28.245161;null;null;null;
+2008-09-30;5;59.6;27.846667;null;null;null;
+2008-10-31;12;142;29.633333;null;null;null;
+2008-11-30;17;264.2;29.123333;null;null;null;
+2008-12-31;18;261;29.393548;null;null;null;
+2009-01-31;18;308.4;28.393548;null;null;null;
+2009-02-28;16;296;30.3;null;null;null;
+2009-03-31;18;205;31.051613;null;null;null;
+2009-04-30;9;85.2;28.273333;null;null;null;
+2009-05-31;4;40.2;26.793548;null;null;null;
+2009-06-30;8;60.4;23.593333;null;null;null;
+2009-07-31;7;60.4;25.612903;null;null;null;
+2009-08-31;4;67.6;26.96129;null;null;null;
+2009-09-30;9;141.2;29;null;null;null;
+2009-10-31;12;109.6;29.787097;null;null;null;
+2009-11-30;13;131.4;31.946667;null;null;null;
+2009-12-31;19;411.6;29.464516;null;null;null;
+2010-01-31;17;263;31.4;null;null;null;
+2010-02-28;10;99;32.157143;null;null;null;
+2010-03-31;11;177.2;30.716129;null;null;null;
+2010-04-30;3;53.8;29.106667;null;null;null;
+2010-05-31;2;23.6;26.619355;null;null;null;
+2010-06-30;2;23.4;24.18;null;null;null;
+2010-07-31;2;14.2;26.051613;null;null;null;
+2010-08-31;0;0;27.932258;null;null;null;
+2010-09-30;6;71.6;29.893333;null;null;null;
+2010-10-31;7;113;29.270968;null;null;null;
+2010-11-30;12;231.8;29.493333;null;null;null;
+2010-12-31;17;303.4;31.683871;null;null;null;
+2011-01-31;22;653.4;29.322581;null;null;null;
+2011-02-28;4;55.8;32.992857;null;null;null;
+2011-03-31;13;179.6;28.574194;null;null;null;
+2011-04-30;8;75.4;29.2;null;null;null;
+2011-05-31;2;36.8;26.566667;null;null;null;
+2011-06-30;3;24.4;24.153333;null;null;null;
+2011-07-31;null;null;null;null;null;null;
+2011-08-31;null;null;null;null;null;null;
+2011-09-30;null;null;null;null;null;null;
+2011-10-31;null;null;null;null;null;null;
+2011-11-30;null;null;null;null;null;null;
+2011-12-31;null;null;null;null;null;null;
+2012-01-31;null;null;null;null;null;null;
+2012-02-29;null;null;null;null;null;null;
+2012-03-31;null;null;null;null;null;null;
+2012-04-30;null;null;null;null;null;null;
+2012-05-31;null;null;null;null;null;null;
+2012-06-30;null;null;null;null;null;null;
+2012-07-31;null;null;null;null;null;null;
+

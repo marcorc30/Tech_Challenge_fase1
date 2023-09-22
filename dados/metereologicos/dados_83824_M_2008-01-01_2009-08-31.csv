@@ -1,0 +1,32 @@
+Nome: ITU
+Codigo Estacao: 83824
+Latitude: -23.264627
+Longitude: -47.299742
+Altitude: 616
+Situacao: Desativada
+Data Inicial: 2008-01-01
+Data Final: 2009-08-31
+Periodicidade da Medicao: Mensal
+
+Data Medicao;NUMERO DE DIAS COM PRECIP. PLUV, MENSAL(número);PRECIPITACAO TOTAL, MENSAL(mm);TEMPERATURA MAXIMA MEDIA, MENSAL(°C);TEMPERATURA MEDIA COMPENSADA, MENSAL(°C);TEMPERATURA MINIMA MEDIA, MENSAL(°C);UMIDADE RELATIVA DO AR, MEDIA MENSAL(%);
+2008-01-31;null;null;null;null;null;null;
+2008-02-29;null;null;null;null;null;null;
+2008-03-31;null;null;null;null;null;null;
+2008-04-30;null;null;null;null;null;null;
+2008-05-31;null;null;null;null;null;null;
+2008-06-30;null;null;null;null;null;null;
+2008-07-31;null;null;null;null;null;null;
+2008-08-31;null;null;null;null;null;null;
+2008-09-30;null;null;null;null;null;null;
+2008-10-31;null;null;null;null;null;null;
+2008-11-30;null;null;null;null;null;null;
+2008-12-31;null;null;null;null;null;null;
+2009-01-31;null;null;null;null;null;null;
+2009-02-28;null;null;null;null;null;null;
+2009-03-31;null;null;null;null;null;null;
+2009-04-30;null;null;null;null;null;null;
+2009-05-31;null;null;null;null;null;null;
+2009-06-30;null;null;null;null;null;null;
+2009-07-31;null;null;null;null;null;null;
+2009-08-31;null;null;null;null;null;null;
+

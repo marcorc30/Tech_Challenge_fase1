@@ -1,0 +1,33 @@
+Nome: CAMPO GRANDE
+Codigo Estacao: 83611
+Latitude: -20.44722221
+Longitude: -54.72277777
+Altitude: 528.43
+Situacao: Desativada
+Data Inicial: 2008-01-01
+Data Final: 2009-09-17
+Periodicidade da Medicao: Mensal
+
+Data Medicao;NUMERO DE DIAS COM PRECIP. PLUV, MENSAL(número);PRECIPITACAO TOTAL, MENSAL(mm);TEMPERATURA MAXIMA MEDIA, MENSAL(°C);TEMPERATURA MEDIA COMPENSADA, MENSAL(°C);TEMPERATURA MINIMA MEDIA, MENSAL(°C);UMIDADE RELATIVA DO AR, MEDIA MENSAL(%);
+2008-01-31;9;null;null;null;null;null;
+2008-02-29;12;null;null;null;21.18;null;
+2008-03-31;15;215.7;30.193333;null;20.57;null;
+2008-04-30;11;93.4;29.23125;null;null;null;
+2008-05-31;11;82.2;26.429412;null;16.442105;null;
+2008-06-30;4;5;26.423529;null;14.19375;null;
+2008-07-31;null;null;null;null;null;null;
+2008-08-31;5;52;32.02;null;null;null;
+2008-09-30;8;55.6;32.305;null;17.752941;null;
+2008-10-31;6;null;null;null;null;null;
+2008-11-30;8;null;null;null;null;null;
+2008-12-31;15;186.4;null;null;null;null;
+2009-01-31;16;226.2;29.973684;null;21.08125;null;
+2009-02-28;13;154;null;null;null;null;
+2009-03-31;17;267.8;31.047368;null;20.646667;null;
+2009-04-30;0;0;31.770588;null;19.626667;null;
+2009-05-31;7;75.6;30.2875;null;null;null;
+2009-06-30;7;85.2;null;null;null;null;
+2009-07-31;9;47.9;27.485714;null;16.733333;null;
+2009-08-31;6;153.8;null;null;null;null;
+2009-09-30;1;null;null;null;null;null;
+

@@ -1,0 +1,55 @@
+Nome: LINHARES
+Codigo Estacao: 83597
+Latitude: -19.416256
+Longitude: -40.073235
+Altitude: 18
+Situacao: Desativada
+Data Inicial: 2008-01-01
+Data Final: 2011-07-25
+Periodicidade da Medicao: Mensal
+
+Data Medicao;NUMERO DE DIAS COM PRECIP. PLUV, MENSAL(número);PRECIPITACAO TOTAL, MENSAL(mm);TEMPERATURA MAXIMA MEDIA, MENSAL(°C);TEMPERATURA MEDIA COMPENSADA, MENSAL(°C);TEMPERATURA MINIMA MEDIA, MENSAL(°C);UMIDADE RELATIVA DO AR, MEDIA MENSAL(%);
+2008-01-31;15;162.9;30.535484;25.360645;21.674194;81.306452;
+2008-02-29;11;165.8;32.2;26.346207;22.248276;79.939655;
+2008-03-31;15;103.1;32.219355;26.164516;22.222581;84.951613;
+2008-04-30;8;165.4;31.846667;26.144;22.406667;84.133333;
+2008-05-31;8;17.7;29.206452;22.603226;18.364516;84.282258;
+2008-06-30;6;23.6;28.22;22.136;17.753333;82.733333;
+2008-07-31;10;24.1;27.6;20.726452;15.690323;81.016129;
+2008-08-31;8;23.3;28.948387;22.284516;16.912903;82.072581;
+2008-09-30;5;10.4;28.966667;22.642667;18.32;78.475;
+2008-10-31;7;47;30.780645;24.897419;20.777419;80.201613;
+2008-11-30;22;326.4;28.573333;24.408667;21.583333;88.083333;
+2008-12-31;17;281.1;29.270968;25.050968;21.867742;null;
+2009-01-31;17;290.2;30.586207;26.216552;22.862069;null;
+2009-02-28;11;82.7;32.3;26.961429;23.307143;null;
+2009-03-31;2;8.8;null;null;null;null;
+2009-04-30;null;null;null;null;null;null;
+2009-05-31;null;null;null;null;null;null;
+2009-06-30;null;null;null;null;null;null;
+2009-07-31;null;null;null;null;null;null;
+2009-08-31;null;null;null;null;null;null;
+2009-09-30;null;null;null;null;null;null;
+2009-10-31;null;null;null;null;null;null;
+2009-11-30;null;null;null;null;null;null;
+2009-12-31;null;null;null;null;null;null;
+2010-01-31;null;null;null;null;null;null;
+2010-02-28;null;null;null;null;null;null;
+2010-03-31;null;null;null;null;null;null;
+2010-04-30;null;null;null;null;null;null;
+2010-05-31;null;null;null;null;null;null;
+2010-06-30;null;null;null;null;null;null;
+2010-07-31;null;null;null;null;null;null;
+2010-08-31;null;null;null;null;null;null;
+2010-09-30;null;null;null;null;null;null;
+2010-10-31;null;null;null;null;null;null;
+2010-11-30;null;null;null;null;null;null;
+2010-12-31;null;null;null;null;null;null;
+2011-01-31;null;null;null;null;null;null;
+2011-02-28;null;null;null;null;null;null;
+2011-03-31;null;null;null;null;null;null;
+2011-04-30;null;null;null;null;null;null;
+2011-05-31;null;null;null;null;null;null;
+2011-06-30;null;null;null;null;null;null;
+2011-07-31;null;null;null;null;null;null;
+
