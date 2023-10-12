@@ -235,7 +235,7 @@ with tab1:
 
     # Exportação de vinhos
     # necessário rodar: pip install openpyxl
-    dados_vinho = pd.read_excel('dados/data.xlsx', skipfooter=2)
+    dados_vinho = pd.read_excel('dados/data.xlsx', skipfooter=2, engine='openpyxl')
     # dados_vinho
 
     # # Retirando a coluna Continent
