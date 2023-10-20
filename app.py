@@ -170,35 +170,6 @@ producao = dados_vinho.query('Variable == "Production"')
 exportacao = dados_vinho.query('Variable == "Exports"')
 
 
-
-
-
-
-
-
-
-# criando gráficos
-fig_mapa_exportacao_quantidade = px.scatter_geo(exp_2023_geo,
-                                  lat='lat',
-                                  lon='lon',
-                                  scope='south america',
-                                  size='KG_LIQUIDO',
-                                  template='seaborn',
-                                  hover_name='SG_UF_NCM',
-                                  hover_data={'lat':True, 'lon':True},
-                                  color = "SG_UF_NCM",  
-                                  title='Volume de Exportação de Vinho por Estado - KG LIQUIDO')
-
-fig_mapa_exportacao = px.scatter_geo(exp_2023_geo,
-                                  lat='lat',
-                                  lon='lon',
-                                  scope='south america',
-                                  template='seaborn',
-                                  hover_name='SG_UF_NCM',
-                                  hover_data={'lat':True, 'lon':True},
-                                  color = "SG_UF_NCM",  
-                                  title='Estados Exportadores de Vinho')
-
 # definindo graficos dos dados climaticos
 
 lista_estados = ['RS']
@@ -224,6 +195,38 @@ dados_exportacao_clima_correlacao = dados_exportacao_clima[['TOTAL_EXPORTADO', '
     'UMIDADE_RELATIVA_DO_AR_MEDIA_MENSAL_PORCENTAGEM']]
 
 
+
+
+
+
+# criando gráficos
+
+
+fig_scatter_exportacao_temperatura_media = px.scatter(dados_exportacao_clima_correlacao,
+                                                      x = 'TOTAL_EXPORTADO',
+                                                      y = 'TEMPERATURA_MEDIA_COMPENSADA',
+                                                      title= 'Dispersão Exportação x Temperatura Média')
+
+fig_scatter_exportacao_temperatura_maxima = px.scatter(dados_exportacao_clima_correlacao,
+                                                      x = 'TOTAL_EXPORTADO',
+                                                      y = 'TEMPERATURA_MAXIMA_MEDIA',
+                                                      title= 'Dispersão Exportação x Temperatura Máxima')
+
+fig_scatter_exportacao_temperatura_minima = px.scatter(dados_exportacao_clima_correlacao,
+                                                      x = 'TOTAL_EXPORTADO',
+                                                      y = 'TEMPERATURA_MINIMA_MEDIA',
+                                                      title= 'Dispersão Exportação x Temperatura Mínima')
+
+fig_scatter_exportacao_umidade = px.scatter(dados_exportacao_clima_correlacao,
+                                                      x = 'TOTAL_EXPORTADO',
+                                                      y = 'UMIDADE_RELATIVA_DO_AR_MEDIA_MENSAL_PORCENTAGEM',
+                                                      title= 'Dispersão Exportação x Umidade Relativa do Ar')
+
+
+fig_scatter_exportacao_precipitacao = px.scatter(dados_exportacao_clima_correlacao,
+                                                      x = 'TOTAL_EXPORTADO',
+                                                      y = 'PRECIPITACAO_TOTAL_EM_MILIMETROS',
+                                                      title= 'Dispersão Exportação x Preipitação')
 
 
 
@@ -281,9 +284,10 @@ fig_correlacao = px.imshow(correlacao, text_auto=True, aspect="auto")
 
 
 # criando abas no dashboard
-aba1, aba2, aba3, aba4, aba5 = st.tabs(['Geolocalização', 'Dados Climáticos', 'Exportação x Dados Climáticos', 'Correlação', 'Conclusão'])
+aba1, aba2, aba3, aba4, aba5, aba6 = st.tabs(['Geolocalização', 'Dados Climáticos', 'Exportação x Dados Climáticos', 'Dispersão', 'Correlação', 'Conclusão'])
 
 with aba1:
+   
 
     with st.container():
         st.write("### Estados exportadores de vinho no Brasil")
@@ -291,18 +295,76 @@ with aba1:
         with st.expander("Descrição da Análise"):
             st.write("""Para se analisar o impacto do clima na produção e exportação de vinho no Brasil,
                      primeiramente temos que encontrar qual estado é o maior produtor e exportador, e a partir
-                     dessa análise, podemos avaliar como o clima influencia nesse estado. Nos graficos 
+                     dessa análise, podemos avaliar como o clima influencia nesse estado. Nos gráficos 
                      abaixo, podemos observar que vários estados brasileiros produzem e exportam vinhos, mas o
                      Rio Grande do Sul é o responsável pela maioria das produções. Portanto, vamos nos basear
                      em como a interferência do clima altera ou não a produção e exportação desse estado.""")    
+            
+        qtd_estados = st.number_input('Quantidade de Estados Apresentados nos Gráficos', 2, 10, 3)        
 
     coluna1,coluna2 = st.columns(2)
 
+    fig_mapa_exportacao_quantidade = px.scatter_geo(exp_2023_geo.sort_values(by='KG_LIQUIDO', ascending=False).head(qtd_estados),
+                                    lat='lat',
+                                    lon='lon',
+                                    scope='south america',
+                                    size='KG_LIQUIDO',
+                                    template='seaborn',
+                                    hover_name='SG_UF_NCM',
+                                    hover_data={'lat':True, 'lon':True},
+                                    color = "SG_UF_NCM",  
+                                    title=f'Top {qtd_estados} dos Estados Exportadores de Vinho - KG LIQUIDO')
+
+
+
+
+    fig_mapa_exportacao = px.scatter_geo(exp_2023_geo,
+                                    lat='lat',
+                                    lon='lon',
+                                    scope='south america',
+                                    template='seaborn',
+                                    hover_name='SG_UF_NCM',
+                                    hover_data={'lat':True, 'lon':True},
+                                    color = "SG_UF_NCM",  
+                                    title='Estados Exportadores de Vinho')
+
+
+
+    fig_mapa_exportacao_quantidade_pizza = px.pie(exp_2023_geo.sort_values(by='KG_LIQUIDO', ascending=False).head(qtd_estados),
+                                                labels='SG_UF_NCM',
+                                                values='KG_LIQUIDO',
+                                                title=f'Top {qtd_estados} dos Estados Exportadores de Vinho - KG LIQUIDO'
+   
+                                               )
+
+    fig_mapa_exportacao_quantidade_pizza.update_layout(
+                                                    paper_bgcolor='rgb(248, 248, 255)',
+                                                    plot_bgcolor='rgb(248, 248, 255)',) 
+
+
+    fig_mapa_exportacao_quantidade_bar = px.bar(exp_2023_geo.sort_values(by='KG_LIQUIDO', ascending=False).head(qtd_estados),
+                                                y='SG_UF_NCM',
+                                                x='KG_LIQUIDO',
+                                                orientation='h',
+                                                hover_data='KG_LIQUIDO',
+                                                title=f'Top {qtd_estados} dos Estados Exportadores de Vinho - KG LIQUIDO'
+                                                )
+    fig_mapa_exportacao_quantidade_bar.update_layout(xaxis = dict(showgrid=True, showline=True),
+                                                    yaxis = dict(showgrid=True, showline=True),
+                                                    barmode='stack',
+                                                    paper_bgcolor='rgb(248, 248, 255)',
+                                                    plot_bgcolor='rgb(248, 248, 255)',) 
+
+
+ 
     with coluna1:
         st.plotly_chart(fig_mapa_exportacao, use_container_width=True)
+        st.plotly_chart(fig_mapa_exportacao_quantidade_pizza, use_container_width=True)
 
     with coluna2:
         st.plotly_chart(fig_mapa_exportacao_quantidade, use_container_width=True)
+        st.plotly_chart(fig_mapa_exportacao_quantidade_bar, use_container_width=True)
+
 
 with aba2:
     with st.container():
@@ -325,6 +387,7 @@ with aba2:
         st.plotly_chart(fig_umidade, use_container_width=True)
         st.plotly_chart(fig_precipitacao, use_container_width=True)
 
+
 with aba3:
     with st.container():
         st.write("### Comparativo Total Exportação x Dados Climáticos")
@@ -332,7 +395,7 @@ with aba3:
     with st.expander("Descrição da Análise"):
         st.write("""
                 Abaixo estamos exibindo um comparativo entre os gráficos das variações climáticas e  os
-                 gráficos dos valores das exportações de vinho. Percebe-se que visualmente não há relação
+                 gráficos dos valores das exportações de vinho, lado a lado. Percebe-se que visualmente não há semelhança
                  aparente, o que nos leva a uma hipótese que não há qualquer relação entre as variáveis.""")    
 
     coluna1, coluna2 = st.columns(2)
@@ -351,7 +414,32 @@ with aba3:
         st.plotly_chart(fig_temperatura_media, use_container_width=True)
         st.plotly_chart(fig_umidade, use_container_width=True)
 
+
 with aba4:
+    with st.container():
+        st.write("### Comparativo Exportação x Dados Climáticos")
+
+    with st.expander("Descrição da Análise"):
+        st.write("""
+                Abaixo estamos exibindo um gráfico de dispersão entre as variáveis climáticas e os valores
+                 exportados. Percebemos claramente que não há nenhum padrão ou tendências nessa relação
+                 em nenhuma das variáveis climáticas analisadas, o que nos leva a levantar a hipótese que 
+                 realmente não há relação entre as variáveis.""")    
+
+    coluna1, coluna2 = st.columns(2)
+
+    with coluna1:
+        st.plotly_chart(fig_scatter_exportacao_temperatura_media, use_container_width=True)
+        st.plotly_chart(fig_scatter_exportacao_temperatura_minima, use_container_width=True)
+        st.plotly_chart(fig_scatter_exportacao_temperatura_maxima, use_container_width=True)
+
+    with coluna2:
+        st.plotly_chart(fig_scatter_exportacao_umidade, use_container_width=True)
+        st.plotly_chart(fig_scatter_exportacao_precipitacao, use_container_width=True)
+            
+
+
+with aba5:
     with st.container():
         st.write("### Correlação entre os dados climáticos o de exportação de vinho")
 
@@ -364,7 +452,7 @@ with aba4:
 
     st.plotly_chart(fig_correlacao, use_container_width=True)
     
-with aba5:
+with aba6:
      with st.container():    
         st.markdown("""
             # Conclusão
