@@ -358,12 +358,13 @@ with aba1:
 
  
     with coluna1:
+        st.plotly_chart(fig_mapa_exportacao_quantidade, use_container_width=True)
         st.plotly_chart(fig_mapa_exportacao, use_container_width=True)
-        st.plotly_chart(fig_mapa_exportacao_quantidade_pizza, use_container_width=True)
+        
 
     with coluna2:
-        st.plotly_chart(fig_mapa_exportacao_quantidade, use_container_width=True)
         st.plotly_chart(fig_mapa_exportacao_quantidade_bar, use_container_width=True)
+        st.plotly_chart(fig_mapa_exportacao_quantidade_pizza, use_container_width=True)
 
 
 with aba2:
